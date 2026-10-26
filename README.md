@@ -3,7 +3,7 @@ Hi! I'm Michelle Divine Winata, a Computer Science student at BINUS University w
 
 Binus University B28
 Computer Science Student 
-GPA: 3.77/4.00
+GPA: 3.77 / 4.00
 
 View my portofolio here!
 https://portofolio-sigma-dusky-10.vercel.app/
