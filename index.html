@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portofolio tugas dan proyek Michelle Divine Winata — Mahasiswi Computer Science yang passionate dalam web development, AI/ML, algoritma, dan database." />
+  <meta name="keywords" content="computer science, portfolio, mahasiswa, tugas kuliah, web development, AI, algoritma, database" />
+  <meta property="og:title" content="Michelle Divine Winata — CS Portfolio" />
+  <meta property="og:description" content="Kumpulan tugas dan proyek Computer Science oleh Michelle Divine Winata." />
+  <title>Michelle Divine Winata — CS Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Fira+Code:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Animated Background -->
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="bg-glow bg-glow-1" aria-hidden="true"></div>
+  <div class="bg-glow bg-glow-2" aria-hidden="true"></div>
+  <canvas id="particle-canvas" aria-hidden="true"></canvas>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo" id="nav-logo">
+        <span class="logo-bracket">&lt;</span>MDW<span class="logo-bracket">/&gt;</span>
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home" class="nav-link active" id="nav-home">Home</a></li>
+        <li><a href="#about" class="nav-link" id="nav-about">About</a></li>
+        <li><a href="#skills" class="nav-link" id="nav-skills">Skills</a></li>
+        <li><a href="#projects" class="nav-link" id="nav-projects">Projects</a></li>
+        <li><a href="#contact" class="nav-link" id="nav-contact">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <div class="hero-text">
+        <div class="hero-badge" id="hero-badge">
+          <span class="badge-dot"></span>
+          Available for Collaboration
+        </div>
+        <h1 class="hero-title" id="hero-title">
+          Hi, I'm <br />
+          <span class="gradient-text">Michelle Divine</span>
+          <br />Winata
+        </h1>
+        <p class="hero-subtitle" id="hero-subtitle">
+          Computer Science Student &amp; <span class="typewriter" id="typewriter"></span>
+        </p>
+        <p class="hero-desc" id="hero-desc">
+          I enjoy building applications and websites while exploring AI, databases, and new technologies. I like turning ideas into practical, functional, and user-friendly digital solutions.
+        </p>
+        <div class="hero-cta" id="hero-cta">
+          <a href="#projects" class="btn btn-primary" id="btn-projects">
+            <span>View My Work</span>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="#contact" class="btn btn-secondary" id="btn-contact">
+            <span>Get In Touch</span>
+          </a>
+        </div>
+        <div class="hero-stats" id="hero-stats">
+          <div class="stat-item">
+            <span class="stat-number" data-target="24">0</span>
+            <span class="stat-label">Projects</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-number" data-target="6">0</span>
+            <span class="stat-label">Semesters</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-number" id="gpa-stat">3.77</span>
+            <span class="stat-label">GPA</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-image" id="hero-image">
+        <div class="image-wrapper">
+          <div class="image-ring ring-1"></div>
+          <div class="image-ring ring-2"></div>
+          <div class="image-ring ring-3"></div>
+          <img src="avatar.jpg" alt="Michelle Divine Winata" class="profile-img" id="profile-img" />
+          <div class="floating-badge badge-html" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="#e34f26"><path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.564-2.438L1.5 0zm7.031 9.75l-.232-2.718 10.059.003.23-2.622L5.412 4.41l.698 8.01h9.126l-.326 3.426-2.91.804-2.955-.81-.188-2.11H6.248l.33 4.171L12 19.351l5.379-1.443.744-8.157H8.531z"/></svg>
+            HTML
+          </div>
+          <div class="floating-badge badge-py" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="#3776ab"><path d="M11.914 0C5.82 0 6.2 2.656 6.2 2.656l.007 2.752h5.814v.826H3.9S0 5.789 0 11.969c0 6.18 3.403 5.963 3.403 5.963h2.031v-2.868s-.109-3.403 3.347-3.403h5.764s3.236.052 3.236-3.128V3.242S18.28 0 11.914 0zm-3.21 1.87a1.047 1.047 0 1 1 0 2.094 1.047 1.047 0 0 1 0-2.094zM12.086 24c6.094 0 5.714-2.656 5.714-2.656l-.007-2.752h-5.814v-.826h8.121S24 18.211 24 12.031c0-6.18-3.403-5.963-3.403-5.963h-2.031v2.868s.109 3.403-3.347 3.403h-5.764s-3.236-.052-3.236 3.128v5.29S5.72 24 12.086 24zm3.21-1.87a1.047 1.047 0 1 1 0-2.094 1.047 1.047 0 0 1 0 2.094z"/></svg>
+            Python
+          </div>
+          <div class="floating-badge badge-react" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="#f05138"><path d="M15.408 0C12.2 0 9.6 2.016 8.272 5.04 6.944 2.016 4.344 0 1.136 0 .504 0 0 .504 0 1.136v11.728C0 16.464 3.056 19.84 7.024 19.984c.272.256.544.512.784.752.368.368.864.576 1.376.576h.304c.512 0 1.008-.208 1.376-.576.24-.24.512-.496.784-.752C15.616 19.84 18.672 16.464 18.672 12.864V1.136C18.672.504 18.168 0 15.408 0zM2.272 12.864V2.256c.8.512 1.488 1.152 2.048 1.888.352 1.328.56 2.736.56 4.208 0 1.904-.336 3.712-.944 5.376-.56.128-1.152.208-1.76.208-.032-.352-.048-.704-.048-1.072h.144zm7.072 4.416c-.528-.528-1.008-1.088-1.424-1.68.576-.208 1.12-.448 1.632-.72.512.272 1.056.512 1.632.72-.416.592-.896 1.152-1.424 1.68h-.416zm7.056-4.416c0 .368-.016.72-.048 1.072-.608 0-1.2-.08-1.76-.208-.608-1.664-.944-3.472-.944-5.376 0-1.472.208-2.88.56-4.208.56-.736 1.248-1.376 2.048-1.888v10.608z"/></svg>
+            Swift
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-indicator" id="scroll-indicator">
+      <div class="mouse">
+        <div class="wheel"></div>
+      </div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="section about" id="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">01 // About</span>
+        <h2 class="section-title">Who Am I?</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-text">
+          <p class="about-para">
+            Saya adalah <strong>Michelle Divine Winata</strong>, mahasiswa <strong>Computer Science</strong> di <strong>BINUS University</strong>. Saat ini, saya mengambil stream/majoring di <strong>Artificial Intelligence</strong> dan tertarik untuk mempelajari bagaimana AI dan teknologi dapat digunakan untuk menyelesaikan berbagai masalah nyata.
+          </p>
+          <p class="about-para">
+            Saya menikmati proses belajar melalui berbagai tugas, proyek, dan eksperimen, mulai dari programming dan pengembangan aplikasi hingga machine learning dan data. Portfolio ini berisi beberapa proyek yang menjadi bagian dari perjalanan saya selama kuliah dan terus mengembangkan kemampuan di bidang teknologi.
+          </p>
+          <div class="about-details">
+            <div class="detail-item">
+              <span class="detail-icon">🎓</span>
+              <div>
+                <span class="detail-label">Program</span>
+                <span class="detail-value">Computer Science - S1</span>
+              </div>
+            </div>
+            <div class="detail-item">
+              <span class="detail-icon">📍</span>
+              <div>
+                <span class="detail-label">Location</span>
+                <span class="detail-value">Indonesia, Jakarta Barat</span>
+              </div>
+            </div>
+            <div class="detail-item">
+              <span class="detail-icon">💡</span>
+              <div>
+                <span class="detail-label">Interest</span>
+                <span class="detail-value">AI, Data Science, Machine & Deep Learning</span>
+              </div>
+            </div>
+            <div class="detail-item">
+              <span class="detail-icon">🚀</span>
+              <div>
+                <span class="detail-label">Status</span>
+                <span class="detail-value">Open to Collaborate</span>
+              </div>
+            </div>
+          </div>
+          <a href="#contact" class="btn btn-primary" id="btn-about-contact">
+            <span>Let's Connect</span>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+        <div class="about-visual">
+          <div class="code-block" id="about-code">
+            <div class="code-header">
+              <div class="code-dots">
+                <span class="dot dot-red"></span>
+                <span class="dot dot-yellow"></span>
+                <span class="dot dot-green"></span>
+              </div>
+              <span class="code-filename">michelle.py</span>
+            </div>
+            <pre class="code-content"><code><span class="code-keyword">class</span> <span class="code-class">Michelle</span>:
+    <span class="code-keyword">def</span> <span class="code-func">__init__</span>(self):
+        self.name = <span class="code-str">"Michelle Divine Winata"</span>
+        self.role = <span class="code-str">"CS Student @ BINUS University"</span>
+        self.passion = [
+            <span class="code-str">"Artificial Intelligence"</span>,
+            <span class="code-str">"Data Science"</span>,
+            <span class="code-str">"Machine &amp; Deep Learning"</span>,
+            <span class="code-str">"Web &amp; App Development"</span>,
+        ]
+        self.gpa = <span class="code-num">3.77</span>
+        self.coffee_per_day = <span class="code-num">3</span>  <span class="code-comment"># ☕</span>
+
+    <span class="code-keyword">def</span> <span class="code-func">say_hello</span>(self):
+        <span class="code-keyword">return</span> <span class="code-str">f"Hi! I'm {self.name} 👋"</span>
+
+    <span class="code-keyword">def</span> <span class="code-func">current_focus</span>(self):
+        <span class="code-keyword">return</span> <span class="code-str">"Building cool stuff! 🚀"</span>
+
+<span class="code-comment"># Initialize</span>
+me = <span class="code-class">Michelle</span>()
+<span class="code-func">print</span>(me.say_hello())</code></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="section skills" id="skills">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">02 // Skills</span>
+        <h2 class="section-title">Tech Stack</h2>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-category" id="skill-web">
+          <div class="skill-category-header">
+            <div class="skill-icon">🌐</div>
+            <h3>Web Development</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag" style="--clr:#e34f26">HTML</span>
+            <span class="skill-tag" style="--clr:#1572b6">CSS</span>
+            <span class="skill-tag" style="--clr:#f7df1e;color:#000">JavaScript</span>
+            <span class="skill-tag" style="--clr:#61dafb">React</span>
+            <span class="skill-tag" style="--clr:#4db33d">Node.js</span>
+            <span class="skill-tag" style="--clr:#a8b3cf">Next.js</span>
+          </div>
+          <div class="skill-bars">
+            <div class="skill-bar-item">
+              <div class="skill-bar-label"><span>HTML/CSS</span><span>90%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="90" style="--clr:#e34f26"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-label"><span>JavaScript</span><span>80%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="80" style="--clr:#f7df1e"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-label"><span>React</span><span>70%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="70" style="--clr:#61dafb"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category" id="skill-ai">
+          <div class="skill-category-header">
+            <div class="skill-icon">🤖</div>
+            <h3>AI / Data Science</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag" style="--clr:#3776ab">Python</span>
+            <span class="skill-tag" style="--clr:#ee4c2c">PyTorch</span>
+            <span class="skill-tag" style="--clr:#e97627">Pandas</span>
+            <span class="skill-tag" style="--clr:#4dabcf">NumPy</span>
+            <span class="skill-tag" style="--clr:#a855f7">Machine &amp; Deep Learning</span>
+          </div>
+          <div class="skill-bars">
+            <div class="skill-bar-item">
+              <div class="skill-bar-label"><span>Python</span><span>85%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="85" style="--clr:#3776ab"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-label"><span>Machine Learning</span><span>72%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="72" style="--clr:#ee4c2c"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-label"><span>Data Analysis</span><span>78%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="78" style="--clr:#e97627"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category" id="skill-cs">
+          <div class="skill-category-header">
+            <div class="skill-icon">⚙️</div>
+            <h3>CS Fundamentals</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag" style="--clr:#00599c">C/C++</span>
+            <span class="skill-tag" style="--clr:#b07219">Java</span>
+            <span class="skill-tag" style="--clr:#4479a1">MySQL</span>
+            <span class="skill-tag" style="--clr:#f05138">Swift</span>
+            <span class="skill-tag" style="--clr:#f05032">Git</span>
+            <span class="skill-tag" style="--clr:#2496ed">Docker</span>
+          </div>
+          <div class="skill-bars">
+            <div class="skill-bar-item">
+              <div class="skill-bar-label"><span>Algorithms & DS</span><span>82%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="82" style="--clr:#00599c"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-label"><span>Database (SQL)</span><span>75%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="75" style="--clr:#4479a1"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-label"><span>Git & DevOps</span><span>68%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="68" style="--clr:#f05032"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="section projects" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">03 // Projects</span>
+        <h2 class="section-title">Tugas & Proyek</h2>
+      </div>
+
+
+
+      <div class="projects-grid" id="projects-grid">
+
+        <!-- Project 1: WeatherApp -->
+        <article class="project-card" data-category="app" id="project-1">
+          <div class="project-image">
+            <div class="project-icon">🌤️</div>
+          </div>
+          <div class="project-body">
+            <div class="project-meta">
+              <span class="project-badge badge-app">iOS App</span>
+              <span class="project-semester">Swift</span>
+            </div>
+            <h3 class="project-title">Weather App</h3>
+            <p class="project-desc">A weather application built with Swift that fetches and displays real-time weather data with a clean and intuitive iOS interface.</p>
+            <div class="project-tech">
+              <span>Swift</span><span>UIKit</span><span>REST API</span><span>Xcode</span>
+            </div>
+            <div class="project-footer">
+              <div class="project-links">
+                <a href="https://github.com/michellewinata/WeatherApp" class="project-link" id="proj1-code">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                  View on GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 2: Gojek Sentiment Analysis -->
+        <article class="project-card" data-category="ai" id="project-2">
+          <div class="project-image">
+            <div class="project-icon">📊</div>
+          </div>
+          <div class="project-body">
+            <div class="project-meta">
+              <span class="project-badge badge-ai">AI / ML</span>
+              <span class="project-semester">Jupyter Notebook</span>
+            </div>
+            <h3 class="project-title">Gojek Review Sentiment Analysis</h3>
+            <p class="project-desc">Sentiment analysis of Gojek app reviews using NLP and machine learning to classify user opinions as positive or negative.</p>
+            <div class="project-tech">
+              <span>Python</span><span>NLP</span><span>Machine Learning</span><span>Pandas</span>
+            </div>
+            <div class="project-footer">
+              <div class="project-links">
+                <a href="https://github.com/michellewinata/gojek-review-sentiment-analysis" class="project-link" id="proj2-code">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                  View on GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 3: Python Code Authorship Detection -->
+        <article class="project-card featured" data-category="ai" id="project-3">
+          <div class="project-image">
+            <div class="project-icon">🔍</div>
+            <div class="featured-badge">Featured</div>
+          </div>
+          <div class="project-body">
+            <div class="project-meta">
+              <span class="project-badge badge-ai">AI / ML</span>
+              <span class="project-semester">Jupyter Notebook</span>
+            </div>
+            <h3 class="project-title">Python Code Authorship Detection</h3>
+            <p class="project-desc">A machine learning model to detect and identify the origin/authorship of Python source code using stylometric and code-pattern features.</p>
+            <div class="project-tech">
+              <span>Python</span><span>Scikit-learn</span><span>NLP</span><span>Jupyter</span>
+            </div>
+            <div class="project-footer">
+              <div class="project-links">
+                <a href="https://github.com/michellewinata/Phyton-Code-Origin" class="project-link" id="proj3-code">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                  View on GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 4: NoiseCore Audio Store UI -->
+        <article class="project-card" data-category="web" id="project-4">
+          <div class="project-image">
+            <div class="project-icon">🎧</div>
+          </div>
+          <div class="project-body">
+            <div class="project-meta">
+              <span class="project-badge badge-web">Web Dev</span>
+              <span class="project-semester">HTML/CSS/JS</span>
+            </div>
+            <h3 class="project-title">NoiseCore Audio Store UI</h3>
+            <p class="project-desc">A dummy e-commerce website for headphones, earphones, and speakers. Built as an HCI course project focusing on usability, interface design, and user experience.</p>
+            <div class="project-tech">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span><span>UI/UX</span>
+            </div>
+            <div class="project-footer">
+              <div class="project-links">
+                <a href="https://github.com/michellewinata/NoiseCore-Audio-Store-UI" class="project-link" id="proj4-code">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                  View on GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 5: BMI Calculator -->
+        <article class="project-card" data-category="app" id="project-5">
+          <div class="project-image">
+            <div class="project-icon">⚖️</div>
+          </div>
+          <div class="project-body">
+            <div class="project-meta">
+              <span class="project-badge badge-app">iOS App</span>
+              <span class="project-semester">Swift</span>
+            </div>
+            <h3 class="project-title">BMI Calculator</h3>
+            <p class="project-desc">A simple BMI Calculator iOS app built with Swift and UIKit, developed while learning iOS development through The App Brewery's course.</p>
+            <div class="project-tech">
+              <span>Swift</span><span>UIKit</span><span>Xcode</span>
+            </div>
+            <div class="project-footer">
+              <div class="project-links">
+                <a href="https://github.com/michellewinata/BMI_Calculator" class="project-link" id="proj5-code">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                  View on GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 6: Quizzler -->
+        <article class="project-card" data-category="app" id="project-6">
+          <div class="project-image">
+            <div class="project-icon">🧠</div>
+          </div>
+          <div class="project-body">
+            <div class="project-meta">
+              <span class="project-badge badge-app">iOS App</span>
+              <span class="project-semester">Swift</span>
+            </div>
+            <h3 class="project-title">Quizzler</h3>
+            <p class="project-desc">A simple and interactive quiz iOS app built with Swift, featuring multiple-choice questions with score tracking and a clean, responsive UI.</p>
+            <div class="project-tech">
+              <span>Swift</span><span>UIKit</span><span>MVC</span><span>Xcode</span>
+            </div>
+            <div class="project-footer">
+              <div class="project-links">
+                <a href="https://github.com/michellewinata/Quizzler" class="project-link" id="proj6-code">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                  View on GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="section contact" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">04 // Contact</span>
+        <h2 class="section-title">Let's Connect</h2>
+        <p class="section-subtitle">Contact Me Here!</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="contact-card" id="contact-email">
+            <div class="contact-icon">📧</div>
+            <div>
+              <span class="contact-label">Email</span>
+              <a href="mailto:michellewinata26@gmail.com" class="contact-value">michellewinata26@gmail.com</a>
+            </div>
+          </div>
+          <div class="contact-card" id="contact-github">
+            <div class="contact-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            </div>
+            <div>
+              <span class="contact-label">GitHub</span>
+              <a href="https://github.com/michellewinata" class="contact-value">github.com/michellewinata</a>
+            </div>
+          </div>
+          <div class="contact-card" id="contact-linkedin">
+            <div class="contact-icon">💼</div>
+            <div>
+              <span class="contact-label">LinkedIn</span>
+              <a href="https://www.linkedin.com/in/michelledivinewinata/" class="contact-value">linkedin.com/in/michelledivinewinata</a>
+            </div>
+          </div>
+          <div class="contact-card" id="contact-instagram">
+            <div class="contact-icon">📸</div>
+            <div>
+              <span class="contact-label">Instagram</span>
+              <a href="https://instagram.com/michellewnta" class="contact-value">@michellewnta</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <p class="footer-copy">© 2026 Michelle Divine Winata. Built with ❤️ &amp; ☕</p>
+        <div class="footer-links">
+          <a href="#home" id="footer-home">Home</a>
+          <a href="#about" id="footer-about">About</a>
+          <a href="#projects" id="footer-projects">Projects</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
